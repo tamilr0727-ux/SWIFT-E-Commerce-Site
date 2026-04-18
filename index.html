@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swift</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">SWIFT</div>
+
+    <nav>
+        <a href="shop.html?category=trend">Trending</a>
+        <a href="shop.html?category=men">Men's Wear</a>
+        <a href="shop.html?category=kids">Teen's & Kids</a>
+        <a href="shop.html?category=sale" class="sale">%Sale</a>
+    </nav>
+
+    <div class="icons">
+        <a href="#" onclick="handleAccountClick()">
+            <i class="fa fa-user"></i>
+        </a>
+        <a href="cart.html">
+            <i class="fa fa-shopping-bag"></i>
+        </a>
+    </div>
+</header>
+
+<!-- HERO SLIDER -->
+<section class="slider">
+
+    <div class="slide active" style="background-image: url('image1.jpg');">
+        <div class="content">
+            <h1>The Beginning of a New SWIFT Era</h1>
+            <p>Style That Speaks for You</p>
+            <button onclick="goToCategory('men')">ORDER-NOW</button>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image: url('image2.jpg');">
+        <div class="content">
+            <h1>From Kids to Kings</h1>
+            <p>Fashion for Every Age</p>
+            <button onclick="goToCategory('kids')">SHOP NOW</button>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image: url('image3.png');">
+        <div class="content">
+            <h1>Elegance in Every Thread</h1>
+            <p>Designed for modern lifestyle</p>
+            <button onclick="goToCategory('sale')">EXPLORE</button>
+        </div>
+    </div>
+
+    <div class="slide" style="background-image: url('image4.jpg');">
+        <div class="content">
+            <h1>Be Bold. Be You</h1>
+            <p>Trend Like Never Before</p>
+            <button onclick="goToCategory('trend')">EXPLORE</button>
+        </div>
+    </div>
+    
+    <div class="arrow left" onclick="prevSlide()">❮</div>
+    <div class="arrow right" onclick="nextSlide()">❯</div>
+
+</section>
+<section class="products-section">
+    <h2>Top Sellers</h2>
+
+    <div class="product-container" id="productContainer">
+        <div class="product">
+            <img src="cart14.jpg">
+            <div class="info">
+                <p class="rating">210 reviews</p>
+                <h3>Anime Printed T-Shirt</h3>
+                <p class="price">₹799</p>
+                <button onclick="addToCart('Anime T-Shirt',799,'cart14.jpg')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 2 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf">
+            <div class="info">
+                <p class="rating">150 reviews</p>
+                <h3>Fancy Shirts</h3>
+                <p class="price">₹1499</p>
+                <button onclick="addToCart('Meme Hoodie',1499,'https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 3 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246">
+            <div class="info">
+                <p class="rating">98 reviews</p>
+                <h3>GenZ Pants</h3>
+                <p class="price">₹999</p>
+                <button onclick="addToCart('Custom T-Shirt',999,'https://images.unsplash.com/photo-1541099649105-f69ad21f3246')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 4 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f">
+            <div class="info">
+                <p class="rating">320 reviews</p>
+                <h3>Cotton Cloths</h3>
+                <p class="price">₹499</p>
+                <button onclick="addToCart('Cap',499,'https://images.unsplash.com/photo-1512436991641-6745cdb1723f')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <!-- PRODUCT 5 -->
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1520975661595-6453be3f7070">
+            <div class="info">
+                <p class="rating">200 reviews</p>
+                <h3>Party Wears</h3>
+                <p class="price">₹699</p>
+                <button onclick="addToCart('Chain',699,'https://images.unsplash.com/photo-1520975661595-6453be3f7070')">ADD TO BAG</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="products-section">
+    <h2>Trending Now</h2>
+
+    <div class="product-container">
+
+        <div class="product">
+            <img src="cart1.jpg">
+            <div class="info">
+                <p class="rating">180 reviews</p>
+                <h3>Plain T-Shirt</h3>
+                <p class="price">₹899</p>
+                <button onclick="addToCart('Quote T-Shirt',899,'cart1.jpg')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="cart2.jpg">
+            <div class="info">
+                <p class="rating">120 reviews</p>
+                <h3>Oversized Street Hoodie</h3>
+                <p class="price">₹1699</p>
+                <button onclick="addToCart('Street Hoodie',1699,'cart2.jpg')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="cart4.jpg">
+            <div class="info">
+                <p class="rating">250 reviews</p>
+                <h3>Custom Initial Hoodie</h3>
+                <p class="price">₹1799</p>
+                <button onclick="addToCart('Custom Hoodie',1799,'cart4.jpg')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="cart3.jpg">
+            <div class="info">
+                <p class="rating">95 reviews</p>
+                <h3>Normal Wear</h3>
+                <p class="price">₹599</p>
+                <button onclick="addToCart('Black Cap',599,'cart3.jpg')">ADD TO BAG</button>
+            </div>
+        </div>
+
+        <div class="product">
+            <img src="https://images.unsplash.com/photo-1544441893-675973e31985">
+            <div class="info">
+                <p class="rating">300 reviews</p>
+                <h3>Silver Chain Street Style</h3>
+                <p class="price">₹799</p>
+                <button onclick="addToCart('Silver Chain',799,'https://images.unsplash.com/photo-1544441893-675973e31985')">ADD TO BAG</button>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+
+    <div class="footer-content">
+        <h2>Enter Email!!!</h2>
+        <p>Receive early access to seasonal offers, exclusive discounts, and much more!</p>
+            <input type="email" id="footerEmail" placeholder="Email">
+            <button onclick="goToLogin()">Mail Me!</button>
+    </div>
+
+    <div class="footer-logo">
+        SWIFT
+    </div>
+    
+    <div class="contact-panel">
+        <h3 style="margin-bottom: 6px;text-decoration: underline;">Contact Us:</h3>
+        <p><strong>Phone:</strong>+91 98765 43210</p>
+        <p><strong>Address:</strong>
+        No. 46, Anna Nagar,
+        Chennai, Tamil Nadu,
+        India
+        </p>
+        <p><strong>📧Email:</strong> support@yourbrand.com</p>
+        
+        <div class="socials">
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+    </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

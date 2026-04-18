@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Profile</title>
+<link rel="stylesheet" href="profile.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+<header>
+    <div class="logo">SWIFT</div>
+    <nav>
+        <a href="index.html">HOME</a>
+    </nav>
+</header>
+
+<div class="profile-container">
+
+    <div class="profile-card">
+
+        <i class="fa fa-user-circle profile-icon"></i>
+
+        <h2 id="userName">User Name</h2>
+        <p id="userEmail">email@example.com</p>
+
+        <button onclick="goHome()">🏠 Back to Home</button>
+        <button onclick="createNew()">➕ Create Another Account</button>
+        <button onclick="logout()" class="logout">🚪 Logout</button>
+
+    </div>
+</div>
+
+<script src="profile.js"></script>
+</body>
+</html>

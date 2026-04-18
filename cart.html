@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Your Cart</title>
+<style>
+    .main{
+        text-align: center;
+        font-family: cursive;
+        font-weight: bold;
+        text-decoration: underline;
+        font-style: italic;
+        margin-top: 8px;
+    }
+</style>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<h2 class="main">Your Shopping Bag</h2>
+
+<div id="cartContainer" class="cart-page"></div>
+
+<!-- SUMMARY -->
+<div class="cart-summary" id="cartSummary"></div>
+
+<div>
+    <button onclick="goToCheckout()">
+        Shop Now
+    </button>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>
